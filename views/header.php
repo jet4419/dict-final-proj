@@ -7,14 +7,16 @@
   <title>Document</title>
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css" />
+  <?php echo '<link rel="stylesheet" type="text/css" href="./style.css" />' ?>
 </head>
-  <style>
+  <!-- <style>
     .center {
       margin: auto;
       width: 95%;
       padding: 10px;
     }
-  </style>
+    
+  </style> -->
 
 <?php
 
