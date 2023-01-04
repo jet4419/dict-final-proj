@@ -9,41 +9,49 @@
             <div class="px-6 py-2 lg:px-8">
                 <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Enter a New Record</h3>
                 <form class="space-y-6" method="POST">
-                    <input type="hidden" class="hiddenId">
+                    <input type="hidden" id="edit_emp_id" class="hiddenId">
                     <div>
-                        <label for="edit_last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
-                        <input type="text" name="edit_last_name" id="edit_last_name" class="editLastName bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your last name">
+                        <label for="edit_last_name" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">Last Name</label>
+                        <input type="text" name="edit_last_name" id="edit_last_name" class="editLastName bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your last name">
                     </div>
                     <div>
-                        <label for="edit_first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                        <input type="text" name="edit_first_name" id="edit_first_name" class="editFirstName bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your first name">
+                        <label for="edit_first_name" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">First Name</label>
+                        <input type="text" name="edit_first_name" id="edit_first_name" class="editFirstName bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your first name">
                     </div>
                     <div>
-                        <label for="edit_middle_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Middle Name</label>
-                        <input type="text" name="edit_middle_name" id="edit_middle_name" class="editMiddleName bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your middle name">
+                        <label for="edit_middle_name" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">Middle Name</label>
+                        <input type="text" name="edit_middle_name" id="edit_middle_name" class="editMiddleName bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter your middle name">
                     </div>
                     <div>
-                      <label for="edit_sex" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sex</label>
-                      <ul class="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                      <label for="edit_sex" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">Sex</label>
+                      <ul class="items-center w-full text-xs font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                               <div class="flex items-center pl-3">
                                   <input id="edit_male" type="radio" value=1 name="edit_sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                  <label for="edit_male" class="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Male</label>
+                                  <label for="edit_male" class="py-3 ml-2 w-full text-xs font-medium text-gray-900 dark:text-gray-300">Male</label>
                               </div>
                           </li>
                           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                               <div class="flex items-center pl-3">
-                                  <input id="edit_female" type="radio" value=2 name="sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                                  <label for="edit_female" class="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Female</label>
+                                  <input id="edit_female" type="radio" value=2 name="edit_sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                  <label for="edit_female" class="py-3 ml-2 w-full text-xs font-medium text-gray-900 dark:text-gray-300">Female</label>
                               </div>
                           </li>
                       </ul>
                     </div>
                     <div>
-                      <label for="edit_address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
-                      <textarea id="edit_address" name="edit_address" rows="1" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your address here..."></textarea>
+                      <label for="edit_address" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">Address</label>
+                      <textarea id="edit_address" name="edit_address" rows="1" class="block p-2.5 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your address here..."></textarea>
                     </div>
-                    <button type="button" name="editRecordForm" class="editSubmitBtn w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                    <div>
+                        <label for="position" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">Position</label>
+                        <select id="position" name="position" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <?php foreach($position as $pos): ?>
+                            <option value="<?=$pos['rank_id']?>"><?= $pos['position']; ?></option>
+                        <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <button type="button" name="editRecordForm" class="editSubmitBtn w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
                 </form>
             </div>
         </div>
