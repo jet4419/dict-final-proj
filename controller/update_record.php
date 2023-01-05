@@ -10,8 +10,11 @@ $empFirstName = mysqli_real_escape_string($conn, $_POST['empFirstName']);
 $empMiddleName = mysqli_real_escape_string($conn, $_POST['empMiddleName']);
 $empSexId = mysqli_real_escape_string($conn, $_POST['empSexId']);
 $empAddress = mysqli_real_escape_string($conn, $_POST['empAddress']);
+$empPosId = mysqli_real_escape_string($conn, $_POST['empPosId']);
 
-$sql="UPDATE employee SET last_name='$empLastName', first_name = '$empFirstName', middle_name = '$empMiddleName', sex_id = '$empSexId', address = '$empAddress' WHERE id=" . $empId;
+$sql="UPDATE employee SET last_name='$empLastName', first_name = '$empFirstName', middle_name = '$empMiddleName', 
+      sex_id = '$empSexId', address = '$empAddress', rank_id = '$empPosId' 
+      WHERE id=" . $empId;
 $result = mysqli_query($conn,$sql);
 
 if($conn->query($sql) === TRUE) {

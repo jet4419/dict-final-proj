@@ -27,13 +27,13 @@
                       <ul class="items-center w-full text-xs font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                               <div class="flex items-center pl-3">
-                                  <input id="edit_male" type="radio" value=1 name="edit_sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                  <input id="edit_male" type="radio" data-sex-label="Male" value=1 name="edit_sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                                   <label for="edit_male" class="py-3 ml-2 w-full text-xs font-medium text-gray-900 dark:text-gray-300">Male</label>
                               </div>
                           </li>
                           <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                               <div class="flex items-center pl-3">
-                                  <input id="edit_female" type="radio" value=2 name="edit_sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                  <input id="edit_female" data-sex-label="Female" type="radio" value=2 name="edit_sex" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                                   <label for="edit_female" class="py-3 ml-2 w-full text-xs font-medium text-gray-900 dark:text-gray-300">Female</label>
                               </div>
                           </li>
@@ -44,14 +44,14 @@
                       <textarea id="edit_address" name="edit_address" rows="1" class="block p-2.5 w-full text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your address here..."></textarea>
                     </div>
                     <div>
-                        <label for="position" class="block mb-2 text-xs font-medium text-gray-900 dark:text-white">Position</label>
-                        <select id="position" name="position" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                        <?php foreach($position as $pos): ?>
-                            <option value="<?=$pos['rank_id']?>"><?= $pos['position']; ?></option>
+                        <label for="edit-employee-position" class="edit-employee-position-label block mb-2 text-xs font-medium text-gray-900 dark:text-white">Position</label>
+                        <select id="edit-employee-position" name="edit-employee-position" class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <?php foreach($empPositions as $pos): ?>
+                            <option data-salary="<?=$pos['salary']?>" value="<?=$pos['rank_id']?>"><?= $pos['position']; ?></option>
                         <?php endforeach; ?>
                         </select>
                     </div>
-                    <button type="button" name="editRecordForm" class="editSubmitBtn w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
+                    <button onclick="editRecordSubmit(event)" type="button" name="editRecordForm" class="editSubmitBtn w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
                 </form>
             </div>
         </div>
